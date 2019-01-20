@@ -1,0 +1,138 @@
+[ERROR:flask.app: Exception on /classify [GET] in 2019-01-20 16:31:12,044; app.py:1761
+Traceback (most recent call last):
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "server.py", line 42, in router
+    '[%(levelname)s:%(name)s: %(message)s in %(asctime)s; %(filename)s:%(lineno)d'
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "D:\Projects\CNN\venv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "D:\Projects\CNN\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "D:\Projects\CNN\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "D:\Projects\CNN\venv\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: classify
+[ERROR:flask.app: Exception on /api/classify/ [GET] in 2019-01-20 16:35:21,124; app.py:1761
+Traceback (most recent call last):
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Projects\CNN\venv\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "server.py", line 40, in router
+    return render_template(path)
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "D:\Projects\CNN\venv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "D:\Projects\CNN\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "D:\Projects\CNN\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "D:\Projects\CNN\venv\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: api/classify/
+[ERROR:flask.app: Exception on /api/classify [POST] in 2019-01-20 16:36:28,352; app.py:1761
+Traceback (most recent call last):
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Projects\CNN\venv\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: classify() missing 1 required positional argument: 'message'
+[ERROR:flask.app: Exception on /api/classify [POST] in 2019-01-20 17:54:14,811; app.py:1761
+Traceback (most recent call last):
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Projects\CNN\venv\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "server.py", line 90, in classify
+    bin_data = io.BytesIO(f)
+NameError: name 'io' is not defined
+[ERROR:flask.app: Exception on /api/classify [POST] in 2019-01-20 17:55:47,326; app.py:1761
+Traceback (most recent call last):
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Projects\CNN\venv\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "server.py", line 97, in classify
+    data = data.reshape(IMG_SIZE, IMG_SIZE, 1)
+ValueError: cannot reshape array of size 7500 into shape (50,50,1)
+[ERROR:flask.app: Exception on /api/classify [POST] in 2019-01-20 17:56:36,436; app.py:1761
+Traceback (most recent call last):
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Projects\CNN\venv\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "server.py", line 97, in classify
+    data = data.reshape(IMG_SIZE, IMG_SIZE, 1)
+ValueError: cannot reshape array of size 7500 into shape (50,50,1)

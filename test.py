@@ -57,9 +57,9 @@ for filename in os.listdir("test"):
     model_out = model.predict([data])[0]
     print(model_out)
     if np.argmax(model_out) == 0:
-        print('Zzazang')
+        print('자장면')
     else:
-        print('Zambbong')
+        print('짬뽕')
     print('\n')
 
 #

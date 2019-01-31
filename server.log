@@ -17,3 +17,64 @@ Traceback (most recent call last):
   File "server.py", line 97, in classify
     data = data.reshape(IMG_SIZE, IMG_SIZE, 1)
 ValueError: cannot reshape array of size 7500 into shape (50,50,1)
+[ERROR:flask.app: Exception on /api/classify [POST] in 2019-01-31 15:19:34,850; app.py:1761
+Traceback (most recent call last):
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "srv.py", line 165, in classify
+    saver.restore(sess, model_path)
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/tensorflow/python/training/saver.py", line 1546, in restore
+    {self.saver_def.filename_tensor_name: save_path})
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1077, in _run
+    raise RuntimeError('The Session graph is empty.  Add operations to the '
+RuntimeError: The Session graph is empty.  Add operations to the graph before calling run().
+[ERROR:flask.app: Exception on /api/classify [POST] in 2019-01-31 15:22:20,183; app.py:1761
+Traceback (most recent call last):
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "srv.py", line 165, in classify
+    saver.restore(sess, model_path)
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/tensorflow/python/training/saver.py", line 1546, in restore
+    {self.saver_def.filename_tensor_name: save_path})
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1077, in _run
+    raise RuntimeError('The Session graph is empty.  Add operations to the '
+RuntimeError: The Session graph is empty.  Add operations to the graph before calling run().
+[ERROR:flask.app: Exception on /api/classify [POST] in 2019-01-31 15:25:25,276; app.py:1761
+Traceback (most recent call last):
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.

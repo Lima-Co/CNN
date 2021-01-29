@@ -1,2 +1,2 @@
-model_checkpoint_path: "image_model"
-all_model_checkpoint_paths: "image_model"
+model_checkpoint_path: "C:\\CNN\\chatbot-0.001-6conv-basic.model"
+all_model_checkpoint_paths: "C:\\CNN\\chatbot-0.001-6conv-basic.model"

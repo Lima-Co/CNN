@@ -4,8 +4,8 @@ import os
 from random import shuffle       
 from tqdm import tqdm           
 
-TRAIN_DIR = 'J:/chatbot2/train'  # Attention! /
-TEST_DIR = 'J:/chatbot2/test'   # Attention! /
+TRAIN_DIR = './train'  # Attention! /
+TEST_DIR = './test'   # Attention! /
 IMG_SIZE = 50
 
 def label_img(img):# add label to each image

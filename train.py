@@ -16,7 +16,7 @@ LR = 1e-3   # change the learnning rate
 MODEL_NAME = 'chatbot-{}-{}.model'.format(LR, '6conv-basic')
 # just so we remember which saved model is which, sizes must match
 
-train_data = np.load('data/train_data.npy')
+train_data = np.load('data/train_data.npy', allow_pickle=True)
 
 tf.reset_default_graph()
 convnet = input_data(shape=[None, IMG_SIZE, IMG_SIZE, 1], name='input')

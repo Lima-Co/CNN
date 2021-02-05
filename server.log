@@ -1,80 +1,140 @@
-[ERROR:flask.app: Exception on /api/classify [POST] in 2019-01-20 17:57:44,198; app.py:1761
+[ERROR:CNN_server: Exception on /api/classify [POST] in 2021-02-05 15:14:27,389; app.py:1892
 Traceback (most recent call last):
-  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+  File "C:\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+  File "C:\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "D:\Projects\CNN\venv\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+  File "C:\venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
     return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+  File "C:\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "D:\Projects\CNN\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+  File "C:\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
     raise value
-  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+  File "C:\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "D:\Projects\CNN\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+  File "C:\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "server.py", line 97, in classify
-    data = data.reshape(IMG_SIZE, IMG_SIZE, 1)
-ValueError: cannot reshape array of size 7500 into shape (50,50,1)
-[ERROR:flask.app: Exception on /api/classify [POST] in 2019-01-31 15:19:34,850; app.py:1761
-Traceback (most recent call last):
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "srv.py", line 165, in classify
+  File "CNN_server.py", line 201, in classify
     saver.restore(sess, model_path)
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/tensorflow/python/training/saver.py", line 1546, in restore
+  File "C:\venv\lib\site-packages\tensorflow_core\python\training\saver.py", line 1290, in restore
     {self.saver_def.filename_tensor_name: save_path})
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 929, in run
+  File "C:\venv\lib\site-packages\tensorflow_core\python\client\session.py", line 956, in run
     run_metadata_ptr)
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1077, in _run
+  File "C:\venv\lib\site-packages\tensorflow_core\python\client\session.py", line 1105, in _run
     raise RuntimeError('The Session graph is empty.  Add operations to the '
 RuntimeError: The Session graph is empty.  Add operations to the graph before calling run().
-[ERROR:flask.app: Exception on /api/classify [POST] in 2019-01-31 15:22:20,183; app.py:1761
+[ERROR:CNN_server: Exception on /api/classify [POST] in 2021-02-05 15:15:48,795; app.py:1892
 Traceback (most recent call last):
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+  File "C:\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+  File "C:\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+  File "C:\venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
     return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+  File "C:\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+  File "C:\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
     raise value
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+  File "C:\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+  File "C:\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "srv.py", line 165, in classify
-    saver.restore(sess, model_path)
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/tensorflow/python/training/saver.py", line 1546, in restore
-    {self.saver_def.filename_tensor_name: save_path})
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 929, in run
-    run_metadata_ptr)
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1077, in _run
-    raise RuntimeError('The Session graph is empty.  Add operations to the '
-RuntimeError: The Session graph is empty.  Add operations to the graph before calling run().
-[ERROR:flask.app: Exception on /api/classify [POST] in 2019-01-31 15:25:25,276; app.py:1761
+  File "CNN_server.py", line 198, in classify
+    saver = tf.train.Saver()
+  File "C:\venv\lib\site-packages\tensorflow_core\python\training\saver.py", line 828, in __init__
+    self.build()
+  File "C:\venv\lib\site-packages\tensorflow_core\python\training\saver.py", line 840, in build
+    self._build(self._filename, build_save=True, build_restore=True)
+  File "C:\venv\lib\site-packages\tensorflow_core\python\training\saver.py", line 865, in _build
+    raise ValueError("No variables to save")
+ValueError: No variables to save
+[ERROR:CNN_server: Exception on /api/classify [POST] in 2021-02-05 15:18:22,482; app.py:1892
 Traceback (most recent call last):
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+  File "C:\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1816, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1831, in finalize_request
-    response = self.make_response(rv)
-  File "/Users/kimyungyi/Documents/Projects/CNN/venv/lib/python3.6/site-packages/flask/app.py", line 1957, in make_response
-    'The view function did not return a valid response. The'
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+  File "C:\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "CNN_server.py", line 194, in classify
+    mean_loss = tf.reduce_mean(losses)
+  File "C:\venv\lib\site-packages\tensorflow_core\python\ops\math_ops.py", line 1812, in reduce_mean_v1
+    return reduce_mean(input_tensor, axis, keepdims, name)
+  File "C:\venv\lib\site-packages\tensorflow_core\python\util\dispatch.py", line 180, in wrapper
+    return target(*args, **kwargs)
+  File "C:\venv\lib\site-packages\tensorflow_core\python\ops\math_ops.py", line 1870, in reduce_mean
+    name=name))
+  File "C:\venv\lib\site-packages\tensorflow_core\python\ops\gen_math_ops.py", line 6391, in mean
+    name=name)
+  File "C:\venv\lib\site-packages\tensorflow_core\python\framework\op_def_library.py", line 367, in _apply_op_helper
+    g = ops._get_graph_from_inputs(_Flatten(keywords.values()))
+  File "C:\venv\lib\site-packages\tensorflow_core\python\framework\ops.py", line 5979, in _get_graph_from_inputs
+    _assert_same_graph(original_graph_element, graph_element)
+  File "C:\venv\lib\site-packages\tensorflow_core\python\framework\ops.py", line 5914, in _assert_same_graph
+    (item, original_item))
+ValueError: Tensor("Const:0", shape=(1,), dtype=int32) must be from the same graph as Tensor("softmax_cross_entropy_with_logits_sg/Reshape_2:0", shape=(?,), dtype=float32).
+[ERROR:CNN_server: Exception on /api/classify [POST] in 2021-02-05 15:23:09,904; app.py:1892
+Traceback (most recent call last):
+  File "C:\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "CNN_server.py", line 221, in classify
+    object_name = label_name_dict[predicted_labels_val]
+TypeError: unhashable type: 'numpy.ndarray'
+[ERROR:CNN_server: Exception on /api/classify [POST] in 2021-02-05 15:24:16,576; app.py:1892
+Traceback (most recent call last):
+  File "C:\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "CNN_server.py", line 221, in classify
+    object_name = label_name_dict[predicted_labels_val]
+TypeError: unhashable type: 'numpy.ndarray'
+[ERROR:CNN_server: Exception on /api/classify [POST] in 2021-02-05 15:24:50,341; app.py:1892
+Traceback (most recent call last):
+  File "C:\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "CNN_server.py", line 223, in classify
+    object_name = label_name_dict[predicted_labels_val]
+TypeError: unhashable type: 'numpy.ndarray'

@@ -10,23 +10,30 @@ IMG_SIZE = 50
 
 def label_img(img):# add label to each image
     word_label = img.split('_')[0]
-    # print(word_label)
+    print(word_label)
     # Zzazang: [1,0]
     # Zambbong: [0,1]
     if word_label == '1':
-        return [1,0]
+        return 1
     elif word_label == '2':
-        return [0,1]
+        return 2
+    elif word_label == '3':
+        return 3
     
 
 def create_train_data(): # create training data, and next time just load train_data.npy
     training_data = []
     for img in tqdm(os.listdir(TRAIN_DIR)):
+        word_label = img.split('_')[0]
+
         label = label_img(img)
+        print (label)
         path = os.path.join(TRAIN_DIR,img)
         img = cv2.imread(path,cv2.IMREAD_GRAYSCALE)
         img = cv2.resize(img, (IMG_SIZE,IMG_SIZE))
-        training_data.append([np.array(img),np.array(label)])
+        # training_data.append([np.array(img),np.array(label)])
+
+        training_data.append([np.array(img), word_label])
     shuffle(training_data)
     np.save('data/train_data.npy', training_data)
     return training_data
